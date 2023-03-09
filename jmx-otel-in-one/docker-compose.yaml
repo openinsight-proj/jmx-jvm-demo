@@ -1,0 +1,42 @@
+version: "2"
+services:
+  adservicejmx:
+    container_name: adservicejmx
+    image: ghcr.io/openinsight-proj/demo:97b4a306810a343eb6857db8f189b634ad830d06-adservice-v2
+    environment:
+      - JAVA_TOOL_OPTIONS="-javaagent:/app/jmx_prometheus_javaagent-0.17.0.jar=8088:/app/prometheus-jmx-config.yaml"
+    ports:
+      - "8088:8088"
+      - "8999:8999"
+  adserviceotel:
+    container_name: adserviceotel
+    image: ghcr.io/openinsight-proj/demo:97b4a306810a343eb6857db8f189b634ad830d06-adservice-v2
+    volumes:
+      #- ./opentelemetry-javaagent.jar:/app/opentelemetry-javaagent.jar
+      - ./jmx-config-file.yaml:/app/jmx_config_file.yaml
+    environment:
+      - JAVA_OPTS=-Dspring.cloud.nacos.config.enabled=false -Dspring.randomError=false -Dotel.jmx.config=/app/jmx_config_file.yaml
+      - OTEL_TRACES_EXPORTER=none
+      - OTEL_EXPORTER_PROMETHEUS_PORT=9464
+      - OTEL_METRICS_EXPORTER=prometheus
+    ports:
+      - "9464:9464"
+      - "9595:9595"
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:v2.30.3
+    volumes:
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yml
+    ports:
+      - "19090:9090"
+    command: --enable-feature=remote-write-receiver --config.file=/etc/prometheus/prometheus.yml
+
+  # jmx exporter dashboard: https://grafana.com/grafana/dashboards/8563-jvm-dashboard/
+  # otel: https://grafana.com/grafana/dashboards/17582-jmx-overview-opentelemetry/?tab=revisions
+  grafana:
+    container_name: grafana
+    image: grafana/grafana-oss
+    # volumes:
+    #   - ./jvm-dashboard_rev17.json:/etc/grafana/provisioning/datasources/jvm-dashboard_rev17.json
+    ports:
+      - "3000:3000"
