@@ -1,0 +1,297 @@
+# TYPE target info
+# HELP target Target metadata
+target_info{container_id="3da5e8bc10cf207f01e0373a82c7bb3f7b8c430a757b6412f2199967a7971f9a",host_arch="amd64",host_name="3da5e8bc10cf",os_description="Linux 5.10.104-linuxkit",os_type="linux",process_command_line="/usr/local/openjdk-11/bin/java -javaagent:/app/opentelemetry-javaagent.jar -Dspring.cloud.nacos.config.enabled=false -Dspring.randomError=false -Dotel.jmx.config=/app/jmx_config_file.yaml -Dotel.metrics.exporter=prometheus -Dotel.exporter.prometheus.port=9464",process_executable_path="/usr/local/openjdk-11/bin/java",process_pid="7",process_runtime_description="Oracle Corporation OpenJDK 64-Bit Server VM 11.0.15+10",process_runtime_name="OpenJDK Runtime Environment",process_runtime_version="11.0.15+10",service_name="adservice-springcloud",telemetry_auto_version="1.22.1",telemetry_sdk_language="java",telemetry_sdk_name="opentelemetry",telemetry_sdk_version="1.22.0"} 1
+# TYPE otel_scope_info info
+# HELP otel_scope_info Scope metadata
+otel_scope_info{otel_scope_name="io.opentelemetry.micrometer-1.5"} 1
+# TYPE otel_scope_info info
+# HELP otel_scope_info Scope metadata
+otel_scope_info{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha"} 1
+# TYPE executor_pool_core gauge
+# HELP executor_pool_core The core number of threads for the pool
+executor_pool_core{otel_scope_name="io.opentelemetry.micrometer-1.5",name="applicationTaskExecutor"} 8.0 1676368076291
+# TYPE logback_events_total counter
+# HELP logback_events_total Number of events that made it to the logs
+logback_events_total{otel_scope_name="io.opentelemetry.micrometer-1.5",level="info"} 12.0 1676368076291
+logback_events_total{otel_scope_name="io.opentelemetry.micrometer-1.5",level="warn"} 3.0 1676368076291
+# TYPE jvm_gc_live_data_size gauge
+# HELP jvm_gc_live_data_size Size of long-lived heap memory pool after reclamation
+jvm_gc_live_data_size{otel_scope_name="io.opentelemetry.micrometer-1.5"} 2.7941376E7 1676368076291
+# TYPE executor_pool_max gauge
+# HELP executor_pool_max The maximum allowed number of threads in the pool
+executor_pool_max{otel_scope_name="io.opentelemetry.micrometer-1.5",name="applicationTaskExecutor"} 2.147483647E9 1676368076291
+# TYPE disk_total gauge
+# HELP disk_total Total space for path
+disk_total{otel_scope_name="io.opentelemetry.micrometer-1.5",path="/app/."} 4.2006183936E10 1676368076291
+# TYPE executor_active gauge
+# HELP executor_active The approximate number of threads that are actively executing tasks
+executor_active{otel_scope_name="io.opentelemetry.micrometer-1.5",name="applicationTaskExecutor"} 0.0 1676368076291
+# TYPE disk_free gauge
+# HELP disk_free Usable space for path
+disk_free{otel_scope_name="io.opentelemetry.micrometer-1.5",path="/app/."} 1.8299908096E10 1676368076291
+# TYPE system_cpu_count gauge
+# HELP system_cpu_count The number of processors available to the Java virtual machine
+system_cpu_count{otel_scope_name="io.opentelemetry.micrometer-1.5"} 2.0 1676368076291
+# TYPE jvm_memory_committed gauge
+# HELP jvm_memory_committed The amount of memory in bytes that is committed for the Java virtual machine to use
+jvm_memory_committed{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",id="G1 Old Gen"} 6.6060288E7 1676368076291
+jvm_memory_committed{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="Compressed Class Space"} 9175040.0 1676368076291
+jvm_memory_committed{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="CodeHeap 'non-profiled nmethods'"} 4653056.0 1676368076291
+jvm_memory_committed{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="CodeHeap 'profiled nmethods'"} 1.8087936E7 1676368076291
+jvm_memory_committed{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="Metaspace"} 6.422528E7 1676368076291
+jvm_memory_committed{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",id="G1 Survivor Space"} 7340032.0 1676368076291
+jvm_memory_committed{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",id="G1 Eden Space"} 1.00663296E8 1676368076291
+jvm_memory_committed{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="CodeHeap 'non-nmethods'"} 2555904.0 1676368076291
+# TYPE jvm_gc_memory_promoted_total counter
+# HELP jvm_gc_memory_promoted_total Count of positive increases in the size of the old generation memory pool before GC to after GC
+jvm_gc_memory_promoted_total{otel_scope_name="io.opentelemetry.micrometer-1.5"} 5922304.0 1676368076291
+# TYPE jvm_gc_max_data_size gauge
+# HELP jvm_gc_max_data_size Max size of long-lived heap memory pool
+jvm_gc_max_data_size{otel_scope_name="io.opentelemetry.micrometer-1.5"} 7.84334848E8 1676368076291
+# TYPE jvm_gc_pause_max gauge
+# HELP jvm_gc_pause_max Time spent in GC pause
+jvm_gc_pause_max{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause"} 0.0 1676368076291
+jvm_gc_pause_max{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold"} 0.0 1676368076291
+# TYPE jvm_gc_memory_allocated_total counter
+# HELP jvm_gc_memory_allocated_total Incremented for an increase in the size of the (young) heap memory pool after one GC to before the next
+jvm_gc_memory_allocated_total{otel_scope_name="io.opentelemetry.micrometer-1.5"} 4.28867584E8 1676368076291
+# TYPE jvm_buffer_count gauge
+# HELP jvm_buffer_count An estimate of the number of buffers in the pool
+jvm_buffer_count{otel_scope_name="io.opentelemetry.micrometer-1.5",id="direct"} 11.0 1676368076291
+jvm_buffer_count{otel_scope_name="io.opentelemetry.micrometer-1.5",id="mapped"} 0.0 1676368076291
+# TYPE jvm_threads_peak gauge
+# HELP jvm_threads_peak The peak live thread count since the Java virtual machine started or peak was reset
+jvm_threads_peak{otel_scope_name="io.opentelemetry.micrometer-1.5"} 34.0 1676368076291
+# TYPE jvm_gc_overhead gauge
+# HELP jvm_gc_overhead An approximation of the percent of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1]
+jvm_gc_overhead{otel_scope_name="io.opentelemetry.micrometer-1.5"} 0.0 1676368076291
+# TYPE executor_completed_total counter
+# HELP executor_completed_total The approximate total number of tasks that have completed execution
+executor_completed_total{otel_scope_name="io.opentelemetry.micrometer-1.5",name="applicationTaskExecutor"} 0.0 1676368076291
+# TYPE application_ready_time gauge
+# HELP application_ready_time Time taken (ms) for the application to be ready to service requests
+application_ready_time{otel_scope_name="io.opentelemetry.micrometer-1.5",main_application_class="org.daocloud.springcloud.adservice.AdserviceApplication"} 11430.0 1676368076291
+# TYPE executor_queue_remaining gauge
+# HELP executor_queue_remaining The number of additional elements that this queue can ideally accept without blocking
+executor_queue_remaining{otel_scope_name="io.opentelemetry.micrometer-1.5",name="applicationTaskExecutor"} 2.147483647E9 1676368076291
+# TYPE jvm_classes_unloaded_total counter
+# HELP jvm_classes_unloaded_total The total number of classes unloaded since the Java virtual machine has started execution
+jvm_classes_unloaded_total{otel_scope_name="io.opentelemetry.micrometer-1.5"} 0.0 1676368076291
+# TYPE process_start_time gauge
+# HELP process_start_time Start time of the process since unix epoch.
+process_start_time{otel_scope_name="io.opentelemetry.micrometer-1.5"} 1.67636753895E12 1676368076291
+# TYPE jvm_memory_used gauge
+# HELP jvm_memory_used The amount of used memory
+jvm_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",id="G1 Old Gen"} 3.0001152E7 1676368076291
+jvm_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="Compressed Class Space"} 8385776.0 1676368076291
+jvm_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="CodeHeap 'non-profiled nmethods'"} 4646912.0 1676368076291
+jvm_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="CodeHeap 'profiled nmethods'"} 1.8068992E7 1676368076291
+jvm_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="Metaspace"} 6.2104928E7 1676368076291
+jvm_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",id="G1 Survivor Space"} 7340032.0 1676368076291
+jvm_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",id="G1 Eden Space"} 4.718592E7 1676368076291
+jvm_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="CodeHeap 'non-nmethods'"} 1354624.0 1676368076291
+# TYPE process_files_open gauge
+# HELP process_files_open The open file descriptor count
+process_files_open{otel_scope_name="io.opentelemetry.micrometer-1.5"} 51.0 1676368076291
+# TYPE jvm_memory_max gauge
+# HELP jvm_memory_max The maximum amount of memory in bytes that can be used for memory management
+jvm_memory_max{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",id="G1 Old Gen"} 7.84334848E8 1676368076291
+jvm_memory_max{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="Compressed Class Space"} 1.073741824E9 1676368076291
+jvm_memory_max{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="CodeHeap 'non-profiled nmethods'"} 1.22916864E8 1676368076291
+jvm_memory_max{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="CodeHeap 'profiled nmethods'"} 1.22912768E8 1676368076291
+jvm_memory_max{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="Metaspace"} -1.0 1676368076291
+jvm_memory_max{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",id="G1 Survivor Space"} -1.0 1676368076291
+jvm_memory_max{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",id="G1 Eden Space"} -1.0 1676368076291
+jvm_memory_max{otel_scope_name="io.opentelemetry.micrometer-1.5",area="nonheap",id="CodeHeap 'non-nmethods'"} 5828608.0 1676368076291
+# TYPE grpc_server_processing_duration_max gauge
+# HELP grpc_server_processing_duration_max The total time taken for the server to complete the call
+grpc_server_processing_duration_max{otel_scope_name="io.opentelemetry.micrometer-1.5",method="Watch",methodType="SERVER_STREAMING",service="grpc.health.v1.Health",statusCode="OK"} 0.0 1676368076291
+grpc_server_processing_duration_max{otel_scope_name="io.opentelemetry.micrometer-1.5",method="ServerReflectionInfo",methodType="BIDI_STREAMING",service="grpc.reflection.v1alpha.ServerReflection",statusCode="OK"} 0.0 1676368076291
+grpc_server_processing_duration_max{otel_scope_name="io.opentelemetry.micrometer-1.5",method="Check",methodType="UNARY",service="grpc.health.v1.Health",statusCode="OK"} 0.0 1676368076291
+grpc_server_processing_duration_max{otel_scope_name="io.opentelemetry.micrometer-1.5",method="GetAds",methodType="UNARY",service="hipstershop.AdService",statusCode="OK"} 0.0 1676368076291
+# TYPE system_load_average_1m gauge
+# HELP system_load_average_1m The sum of the number of runnable entities queued to available processors and the number of runnable entities running on the available processors averaged over a period of time
+system_load_average_1m{otel_scope_name="io.opentelemetry.micrometer-1.5"} 0.0 1676368076291
+# TYPE jvm_classes_loaded gauge
+# HELP jvm_classes_loaded The number of classes that are currently loaded in the Java virtual machine
+jvm_classes_loaded{otel_scope_name="io.opentelemetry.micrometer-1.5"} 12983.0 1676368076291
+# TYPE jvm_gc_pause histogram
+# HELP jvm_gc_pause Time spent in GC pause
+jvm_gc_pause_count{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause"} 5.0 1676368076291
+jvm_gc_pause_sum{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause"} 70.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="0.0"} 0.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="5.0"} 0.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="10.0"} 0.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="25.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="50.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="75.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="100.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="250.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="500.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="750.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="1000.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="2500.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="5000.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="7500.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="10000.0"} 5.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="G1 Evacuation Pause",le="+Inf"} 5.0 1676368076291
+jvm_gc_pause_count{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold"} 1.0 1676368076291
+jvm_gc_pause_sum{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold"} 12.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="0.0"} 0.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="5.0"} 0.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="10.0"} 0.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="25.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="50.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="75.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="100.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="250.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="500.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="750.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="1000.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="2500.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="5000.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="7500.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="10000.0"} 1.0 1676368076291
+jvm_gc_pause_bucket{otel_scope_name="io.opentelemetry.micrometer-1.5",action="end of minor GC",cause="Metadata GC Threshold",le="+Inf"} 1.0 1676368076291
+# TYPE jvm_buffer_memory_used gauge
+# HELP jvm_buffer_memory_used An estimate of the memory that the Java virtual machine is using for this buffer pool
+jvm_buffer_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",id="direct"} 237570.0 1676368076291
+jvm_buffer_memory_used{otel_scope_name="io.opentelemetry.micrometer-1.5",id="mapped"} 0.0 1676368076291
+# TYPE jvm_threads_live gauge
+# HELP jvm_threads_live The current number of live threads including both daemon and non-daemon threads
+jvm_threads_live{otel_scope_name="io.opentelemetry.micrometer-1.5"} 34.0 1676368076291
+# TYPE system_cpu_usage gauge
+# HELP system_cpu_usage The "recent cpu usage" of the system the application is running in
+system_cpu_usage{otel_scope_name="io.opentelemetry.micrometer-1.5"} 0.004985044865403789 1676368076291
+# TYPE executor_queued gauge
+# HELP executor_queued The approximate number of tasks that are queued for execution
+executor_queued{otel_scope_name="io.opentelemetry.micrometer-1.5",name="applicationTaskExecutor"} 0.0 1676368076291
+# TYPE process_files_max gauge
+# HELP process_files_max The maximum file descriptor count
+process_files_max{otel_scope_name="io.opentelemetry.micrometer-1.5"} 1048576.0 1676368076291
+# TYPE application_started_time gauge
+# HELP application_started_time Time taken (ms) to start the application
+application_started_time{otel_scope_name="io.opentelemetry.micrometer-1.5",main_application_class="org.daocloud.springcloud.adservice.AdserviceApplication"} 11417.0 1676368076291
+# TYPE jvm_threads_states gauge
+# HELP jvm_threads_states The current number of threads
+jvm_threads_states{otel_scope_name="io.opentelemetry.micrometer-1.5",state="new"} 0.0 1676368076291
+jvm_threads_states{otel_scope_name="io.opentelemetry.micrometer-1.5",state="terminated"} 0.0 1676368076291
+jvm_threads_states{otel_scope_name="io.opentelemetry.micrometer-1.5",state="runnable"} 10.0 1676368076291
+jvm_threads_states{otel_scope_name="io.opentelemetry.micrometer-1.5",state="timed-waiting"} 6.0 1676368076291
+jvm_threads_states{otel_scope_name="io.opentelemetry.micrometer-1.5",state="waiting"} 18.0 1676368076291
+jvm_threads_states{otel_scope_name="io.opentelemetry.micrometer-1.5",state="blocked"} 0.0 1676368076291
+# TYPE jvm_memory_usage_after_gc gauge
+# HELP jvm_memory_usage_after_gc The percentage of long-lived heap pool used after the last GC event, in the range [0..1]
+jvm_memory_usage_after_gc{otel_scope_name="io.opentelemetry.micrometer-1.5",area="heap",pool="long-lived"} 0.0382504386697861 1676368076291
+# TYPE process_cpu_usage gauge
+# HELP process_cpu_usage The "recent cpu usage" for the Java Virtual Machine process
+process_cpu_usage{otel_scope_name="io.opentelemetry.micrometer-1.5"} 0.0019940179461615153 1676368076291
+# TYPE executor_pool_size gauge
+# HELP executor_pool_size The current number of threads in the pool
+executor_pool_size{otel_scope_name="io.opentelemetry.micrometer-1.5",name="applicationTaskExecutor"} 0.0 1676368076291
+# TYPE jvm_threads_daemon gauge
+# HELP jvm_threads_daemon The current number of live daemon threads
+jvm_threads_daemon{otel_scope_name="io.opentelemetry.micrometer-1.5"} 28.0 1676368076291
+# TYPE process_uptime gauge
+# HELP process_uptime The uptime of the Java virtual machine
+process_uptime{otel_scope_name="io.opentelemetry.micrometer-1.5"} 537776.0 1676368076291
+# TYPE jvm_buffer_total_capacity gauge
+# HELP jvm_buffer_total_capacity An estimate of the total capacity of the buffers in this pool
+jvm_buffer_total_capacity{otel_scope_name="io.opentelemetry.micrometer-1.5",id="direct"} 237568.0 1676368076291
+jvm_buffer_total_capacity{otel_scope_name="io.opentelemetry.micrometer-1.5",id="mapped"} 0.0 1676368076291
+# TYPE process_runtime_jvm_memory_usage_after_last_gc gauge
+# HELP process_runtime_jvm_memory_usage_after_last_gc Measure of memory used after the most recent garbage collection event on this pool
+process_runtime_jvm_memory_usage_after_last_gc{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Old Gen",type="heap"} 0.0 1676368076291
+process_runtime_jvm_memory_usage_after_last_gc{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Survivor Space",type="heap"} 7340032.0 1676368076291
+process_runtime_jvm_memory_usage_after_last_gc{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Eden Space",type="heap"} 0.0 1676368076291
+# TYPE process_runtime_jvm_system_cpu_load_1m gauge
+# HELP process_runtime_jvm_system_cpu_load_1m Average CPU load of the whole system for the last minute
+process_runtime_jvm_system_cpu_load_1m{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha"} 0.0 1676368076291
+# TYPE process_runtime_jvm_system_cpu_utilization gauge
+# HELP process_runtime_jvm_system_cpu_utilization Recent cpu utilization for the whole system
+process_runtime_jvm_system_cpu_utilization{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha"} 0.0 1676368076291
+# TYPE process_runtime_jvm_memory_usage gauge
+# HELP process_runtime_jvm_memory_usage Measure of memory used
+process_runtime_jvm_memory_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Old Gen",type="heap"} 3.0001152E7 1676368076291
+process_runtime_jvm_memory_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'profiled nmethods'",type="non_heap"} 1.8068992E7 1676368076291
+process_runtime_jvm_memory_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="Compressed Class Space",type="non_heap"} 8385776.0 1676368076291
+process_runtime_jvm_memory_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'non-nmethods'",type="non_heap"} 1354624.0 1676368076291
+process_runtime_jvm_memory_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Survivor Space",type="heap"} 7340032.0 1676368076291
+process_runtime_jvm_memory_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'non-profiled nmethods'",type="non_heap"} 4646912.0 1676368076291
+process_runtime_jvm_memory_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="Metaspace",type="non_heap"} 6.2104928E7 1676368076291
+process_runtime_jvm_memory_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Eden Space",type="heap"} 4.718592E7 1676368076291
+# TYPE process_runtime_jvm_buffer_limit gauge
+# HELP process_runtime_jvm_buffer_limit Total capacity of the buffers in this pool
+process_runtime_jvm_buffer_limit{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="mapped"} 0.0 1676368076291
+process_runtime_jvm_buffer_limit{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="direct"} 237568.0 1676368076291
+# TYPE process_runtime_jvm_buffer_usage gauge
+# HELP process_runtime_jvm_buffer_usage Memory that the Java virtual machine is using for this buffer pool
+process_runtime_jvm_buffer_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="mapped"} 0.0 1676368076291
+process_runtime_jvm_buffer_usage{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="direct"} 237570.0 1676368076291
+# TYPE process_runtime_jvm_threads_count gauge
+# HELP process_runtime_jvm_threads_count Number of executing threads
+process_runtime_jvm_threads_count{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",daemon="false"} 6.0 1676368076291
+process_runtime_jvm_threads_count{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",daemon="true"} 28.0 1676368076291
+# TYPE process_runtime_jvm_classes_unloaded_total counter
+# HELP process_runtime_jvm_classes_unloaded_total Number of classes unloaded since JVM start
+process_runtime_jvm_classes_unloaded_total{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha"} 0.0 1676368076291
+# TYPE process_runtime_jvm_buffer_count gauge
+# HELP process_runtime_jvm_buffer_count The number of buffers in the pool
+process_runtime_jvm_buffer_count{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="mapped"} 0.0 1676368076291
+process_runtime_jvm_buffer_count{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="direct"} 11.0 1676368076291
+# TYPE process_runtime_jvm_memory_committed gauge
+# HELP process_runtime_jvm_memory_committed Measure of memory committed
+process_runtime_jvm_memory_committed{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Old Gen",type="heap"} 6.6060288E7 1676368076291
+process_runtime_jvm_memory_committed{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'profiled nmethods'",type="non_heap"} 1.8087936E7 1676368076291
+process_runtime_jvm_memory_committed{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="Compressed Class Space",type="non_heap"} 9175040.0 1676368076291
+process_runtime_jvm_memory_committed{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'non-nmethods'",type="non_heap"} 2555904.0 1676368076291
+process_runtime_jvm_memory_committed{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Survivor Space",type="heap"} 7340032.0 1676368076291
+process_runtime_jvm_memory_committed{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'non-profiled nmethods'",type="non_heap"} 4653056.0 1676368076291
+process_runtime_jvm_memory_committed{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="Metaspace",type="non_heap"} 6.422528E7 1676368076291
+process_runtime_jvm_memory_committed{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Eden Space",type="heap"} 1.00663296E8 1676368076291
+# TYPE process_runtime_jvm_memory_limit gauge
+# HELP process_runtime_jvm_memory_limit Measure of max obtainable memory
+process_runtime_jvm_memory_limit{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Old Gen",type="heap"} 7.84334848E8 1676368076291
+process_runtime_jvm_memory_limit{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'profiled nmethods'",type="non_heap"} 1.22912768E8 1676368076291
+process_runtime_jvm_memory_limit{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="Compressed Class Space",type="non_heap"} 1.073741824E9 1676368076291
+process_runtime_jvm_memory_limit{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'non-nmethods'",type="non_heap"} 5828608.0 1676368076291
+process_runtime_jvm_memory_limit{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'non-profiled nmethods'",type="non_heap"} 1.22916864E8 1676368076291
+# TYPE process_runtime_jvm_classes_current_loaded gauge
+# HELP process_runtime_jvm_classes_current_loaded Number of classes currently loaded
+process_runtime_jvm_classes_current_loaded{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha"} 12983.0 1676368076291
+# TYPE process_runtime_jvm_memory_init gauge
+# HELP process_runtime_jvm_memory_init Measure of initial memory requested
+process_runtime_jvm_memory_init{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Old Gen",type="heap"} 4.194304E7 1676368076291
+process_runtime_jvm_memory_init{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'profiled nmethods'",type="non_heap"} 2555904.0 1676368076291
+process_runtime_jvm_memory_init{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="Compressed Class Space",type="non_heap"} 0.0 1676368076291
+process_runtime_jvm_memory_init{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'non-nmethods'",type="non_heap"} 2555904.0 1676368076291
+process_runtime_jvm_memory_init{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Survivor Space",type="heap"} 0.0 1676368076291
+process_runtime_jvm_memory_init{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="CodeHeap 'non-profiled nmethods'",type="non_heap"} 2555904.0 1676368076291
+process_runtime_jvm_memory_init{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="Metaspace",type="non_heap"} 0.0 1676368076291
+process_runtime_jvm_memory_init{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",pool="G1 Eden Space",type="heap"} 8388608.0 1676368076291
+# TYPE process_runtime_jvm_classes_loaded_total counter
+# HELP process_runtime_jvm_classes_loaded_total Number of classes loaded since JVM start
+process_runtime_jvm_classes_loaded_total{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha"} 12983.0 1676368076291
+# TYPE process_runtime_jvm_gc_duration histogram
+# HELP process_runtime_jvm_gc_duration Duration of JVM garbage collection actions
+process_runtime_jvm_gc_duration_count{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_sum{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation"} 292.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="0.0"} 0.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="5.0"} 16.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="10.0"} 23.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="25.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="50.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="75.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="100.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="250.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="500.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="750.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="1000.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="2500.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="5000.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="7500.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="10000.0"} 36.0 1676368076291
+process_runtime_jvm_gc_duration_bucket{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha",action="end of minor GC",gc="G1 Young Generation",le="+Inf"} 36.0 1676368076291
+# TYPE process_runtime_jvm_cpu_utilization gauge
+# HELP process_runtime_jvm_cpu_utilization Recent cpu utilization for the process
+process_runtime_jvm_cpu_utilization{otel_scope_name="io.opentelemetry.runtime-metrics",otel_scope_version="1.22.1-alpha"} 1.0 1676368076291

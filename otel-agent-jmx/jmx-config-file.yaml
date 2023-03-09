@@ -1,0 +1,21 @@
+---
+rules:
+  - bean: java.lang:type=Threading
+    mapping:
+      ThreadCount:
+        metric: my.own.jvm.thread.count
+        type: updowncounter
+        desc: The current number of threads
+        unit: 1
+  - bean: java.lang:type=Memory
+    mapping:
+      HeapMemoryUsage.used:
+        metric: my.own.jvm.heap.used
+        type: updowncounter
+        desc: The current heap size
+        unit: By
+      HeapMemoryUsage.max:
+        metric: my.own.jvm.heap.max
+        type: updowncounter
+        desc: The maximum allowed heap size
+        unit: By
